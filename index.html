@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <!--link to the font--> <!--font-family: 'Poppins', sans-serif;-->
+  <!--link to the font--> 
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
@@ -27,39 +27,22 @@
 
   <section class="form-section">
     <div class="offer-placeholder">
-      <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+      <p class="pOffer"><span class="offer">Try it free 7 days</span> then $20/mo. thereafter</p>
     </div>
 
     <div class="form">
       <form action="#" method="get" id="form">
-        <input type="text" name="firstName" placeholder="First Name" maxlength="30" />
-        <input type="text" name="lastName" placeholder="Last Name" maxlength="30" />
-        <input type="email" name="email" placeholder="Email Address" maxlength="50" />
-        <input type="password" name="password" placeholder="Password" maxlength="12" />
-        <div class="submit-btn">
-          <input type="submit" value="Claim your free trial "/>
-        </div>
-        <p class="terms">By clicking the button, you are agreeing to our Terms and Services</p>
+        <input class="form-space" type="text" name="firstName" placeholder="First Name" maxlength="30" />
+        <input class="form-space" type="text" name="lastName" placeholder="Last Name" maxlength="30" />
+        <input class="form-space" type="email" name="email" placeholder="Email Address" maxlength="50" />
+        <input class="form-space" type="password" name="password" placeholder="Password" maxlength="12" />
+        <input class="submit-btn" type="submit" value="CLAIM YOUR FREE TRIAL"/>
+        <p class="terms">By clicking the button, you are agreeing to our <span class="termsAndService">Terms and Services</span></p>
       </form>
     </div>
   </section>
 
-  
-
-  
-
-  
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  
-
-
   <script src="./script/script.js"></script>
+
 </body>
 </html>
