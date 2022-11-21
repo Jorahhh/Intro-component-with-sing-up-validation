@@ -187,8 +187,13 @@ p{
     padding-right: 8%;
   }
 
+
   .form-section{
     padding: 0;
+  }
+
+  .form{
+    padding: 6%;
   }
 
   .offer-placeholder {
@@ -198,6 +203,7 @@ p{
 
   .form-space{
     padding: 4% 2%;
+    margin-bottom: 4%;
   }
 
   .submit-btn{
