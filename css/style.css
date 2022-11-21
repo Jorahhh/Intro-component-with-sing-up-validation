@@ -59,15 +59,22 @@ body{
   height: 100vh;
 }
 
+@media (min-width: 1024px){
+  
+}
+
+
+
 .text-section{
   padding: 25% 7% 15% 7%;
   text-align: center;
 }
 
+
 h2{
   font-weight: 700;
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin-bottom: 5%;
   padding: 2%;
 }
@@ -77,6 +84,7 @@ p{
   font-weight: 400;
   font-size: 1rem;
 }
+
 
 .form-section{
   padding: 0 7% 25% 7%;
@@ -133,7 +141,9 @@ p{
   color: white;
   box-shadow: 0 4px hsla(154, 59%, 51%, 40%);
   margin-bottom: 6%;
+  cursor: pointer;
 }
+
 
 .terms{
   color: var(--grayishBlue);
@@ -144,4 +154,90 @@ p{
 .termsAndService{
   font-weight: 700;
   color: var(--red);
+}
+
+
+
+
+/*---Desktop Query---*/
+@media (min-width: 1024px){
+
+  body{
+    background: url("../images/bg-intro-desktop.png"), var(--red);
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    padding: 0 12%;
+  }
+
+  .text-section{
+    text-align: left;
+    margin-right: 5%;
+    padding: 0;
+  }
+
+  h2{
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 0;
+    margin: 0 auto 5% auto;
+  }
+
+  p{
+    padding-right: 8%;
+  }
+
+  .form-section{
+    padding: 0;
+  }
+
+  .offer-placeholder {
+    padding: 4% 20%;
+    margin-bottom: 5%;
+  }
+
+  .form-space{
+    padding: 4% 2%;
+  }
+
+  .submit-btn{
+    padding: 4%;
+  }
+
+  .terms{
+    color: var(--grayishBlue);
+    font-size: 0.6rem;
+    padding: 0;
+  }
+
+}
+
+
+
+/*---Tablet Query---*/
+
+@media screen and (min-width:800px) and (max-width: 1023px){
+  .text-section{
+    padding: 25% 12% 15% 12%;
+  }
+
+  h2{
+    font-size: 2.5rem;
+  }
+
+  .form-section{
+    padding: 0 12% 25% 12%;
+    text-align: center;
+  }
+
+  .offer{
+    font-size: 1rem;
+  }
+
+  .pOffer{
+    font-size: 1rem;
+  }
+
+ 
+
 }
