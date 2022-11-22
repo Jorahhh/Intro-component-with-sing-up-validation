@@ -131,6 +131,31 @@ p{
   font-weight: 600;
 }
 
+.submit{
+  padding: 4%;
+  width: 100%;
+  background-color: var(--green);
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 4px hsla(154, 59%, 51%, 40%);
+  margin-bottom: 6%;
+  cursor: pointer;
+}
+
+.submit:hover{
+  background-color: hsla(154, 59%, 51%, 60%);
+}
+
+.submit-btn{
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+/*
 .submit-btn{
   padding: 6%;
   width: 100%;
@@ -143,6 +168,7 @@ p{
   margin-bottom: 6%;
   cursor: pointer;
 }
+*/
 
 
 .terms{
@@ -206,9 +232,10 @@ p{
     margin-bottom: 4%;
   }
 
-  .submit-btn{
-    padding: 4%;
+  .submit{
+    padding: 3%;
   }
+
 
   .terms{
     color: var(--grayishBlue);
