@@ -69,6 +69,5 @@ const validateForm = () => {
 submitBtn.addEventListener('click', event => {
     event.preventDefault();
     validateForm();
-    alertPop();
 })
 
