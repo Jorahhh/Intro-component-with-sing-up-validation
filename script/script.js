@@ -12,11 +12,6 @@ formSpace.forEach( el => {
     el.style.background = 'none';
 });
 
-
-
-
-
-
 const validateForm = () => {
     let firstNameForm = document.forms['myForm']['firstName'].value;
     if(firstNameForm == ''){
