@@ -129,6 +129,8 @@ p{
   border-radius: 6px;
   border: 1px solid var(--grayishBlue);
   font-weight: 600;
+  background: url('../images/icon-error.svg') no-repeat;
+  background-position: 95%;
 }
 
 .submit{
@@ -155,20 +157,6 @@ p{
   font-weight: 700;
   cursor: pointer;
 }
-/*
-.submit-btn{
-  padding: 6%;
-  width: 100%;
-  font-weight: 700;
-  background-color: var(--green);
-  border-radius: 6px;
-  border: none;
-  color: white;
-  box-shadow: 0 4px hsla(154, 59%, 51%, 40%);
-  margin-bottom: 6%;
-  cursor: pointer;
-}
-*/
 
 
 .terms{
@@ -180,6 +168,30 @@ p{
 .termsAndService{
   font-weight: 700;
   color: var(--red);
+}
+
+.error-message{
+  color: var(--red);
+  text-align: right;
+  font-size: 0.7rem;
+  margin: -3% 0 3% 0;
+  display: none;
+}
+
+#errFName{
+  display: none;
+}
+
+#errLName{
+  display: none;
+}
+
+#errMail{
+  display: none;
+}
+
+#errPass{
+  display: none;
 }
 
 
@@ -225,13 +237,15 @@ p{
   }
 
   .offer-placeholder {
-    padding: 4% 20%;
+    padding: 4% 0;
     margin-bottom: 5%;
   }
 
   .form-space{
     padding: 4% 2%;
     margin-bottom: 4%;
+    background: url('../images/icon-error.svg') no-repeat;
+    background-position: 95%;
   }
 
   .submit{
@@ -245,9 +259,8 @@ p{
     padding: 0;
   }
 
+
 }
-
-
 
 /*---Tablet Query---*/
 
@@ -267,6 +280,10 @@ p{
   .form-section{
     padding: 0 12% 25% 12%;
     text-align: center;
+  }
+
+  .form-space{
+    padding: 5% 2%;
   }
 
   .offer{
