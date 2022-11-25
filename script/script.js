@@ -6,65 +6,82 @@ const password = document.getElementById('pw');
 const submitBtn = document.getElementById('subm');
 const formSpace = document.querySelectorAll('.form-space');
 
-console.log(firstName.value);
+//Error messagges
+const errFName = document.getElementById('errFName');
+const errLName = document.getElementById('errLName');
+const errMail = document.getElementById('errMail');
+const errPass = document.getElementById('errPass');
 
 //It doesn't show the 'error' icons at the beginning
 formSpace.forEach( el => {
     el.style.background = 'none';
 });
 
+
+
 const validateForm = () => {
-    if(firstName.value == ''){
-        let errFName = document.getElementById('errFName');
-        errFName.style.display = 'block';
-        firstName.style.border = '1px solid red';
-        firstName.style.background = '';
+    if(firstName.value === ''){
+        invalidInput(firstName, errFName);
     } else {
-        errFName.style.display = '';
-        firstName.style.border = '1px solid var(--green)';
-        firstName.style.background = 'none';
+        validInput(firstName, errFName);
     }
 
-    if(lastName.value=== '') {
-        let errLName = document.getElementById('errLName');
-        errLName.style.display = 'block';
-        lastName.style.border = '1px solid red';
-        lastName.style.background = '';
+    if(lastName.value === ''){
+        invalidInput(lastName, errLName);
     } else {
-        errLName.style.display = '';
-        lastName.style.border = '1px solid var(--green)';
-        lastName.style.background = 'none';
+        validInput(lastName, errLName);
     }
 
-    let expReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
-    let emValidate = expReg.test(email.value);
-    if(emValidate === false){
-        let errMail = document.getElementById('errMail');
-        errMail.style.display = 'block';
-        email.style.border = '1px solid red';
-        email.style.background = '';
-    } else {
-        errMail.style.display = '';
-        email.style.border = '1px solid var(--green)';
-        email.style.background = 'none';
-    }
-
-    if(password.value.length < 6) {
-        let errPass = document.getElementById('errPass');
-        errPass.style.display = 'block';
-        password.style.border = '1px solid red';
-        password.style.background = '';
-    } else {
-        errPass.style.display = '';
-        password.style.border = '1px solid var(--green)';
-        password.style.background = 'none';
-    }
+    validateEmail();
+    validatePassword();
+    
 }
-
 
 
 submitBtn.addEventListener('click', event => {
     event.preventDefault();
     validateForm();
 })
+
+
+
+
+
+
+const invalidInput = (name, error) => {
+    error.style.display = 'block';
+    name.style.border = '1px solid red';
+    name.style.background = '';
+}
+
+const validInput = (name, error) => {
+    error.style.display = '';
+    name.style.border = '1px solid var(--green)';
+    name.style.background = 'none';
+} 
+
+const validateEmail = () => {
+    let expReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
+    let emValidate = expReg.test(email.value);
+    if(emValidate === false){
+        invalidInput(email, errMail);
+    } else {
+        validInput(email, errMail);
+    }
+}
+
+const validatePassword = () => {
+    if(password.value < 12){
+        invalidInput(password, errPass);
+    } else {
+        validInput(password, errPass);
+    }
+}
+
+
+
+
+
+
+
 
