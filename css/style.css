@@ -42,7 +42,6 @@ q:before, q:after {
   content: none;
 }
 
-
 :root{
   --red: hsl(0, 100%, 74%);
   --green: hsl(154, 59%, 51%);
@@ -64,13 +63,13 @@ body{
   text-align: center;
 }
 
-
-h2{
+h1{
   font-weight: 700;
   color: white;
   font-size: 2rem;
   margin-bottom: 5%;
   padding: 2%;
+  line-height: 2.5rem;
 }
 
 p{
@@ -90,7 +89,7 @@ p{
   background-color: var(--blue);
   display: flex;
   align-items: center;
-  padding: 4% 20%;
+  padding: 5% 10%;
   box-shadow: 0 8px hsla(249, 10%, 10%, 20%);
   margin-bottom: 6%;
 }
@@ -199,7 +198,7 @@ p{
     padding: 0;
   }
 
-  h2{
+  h1{
     font-size: 3rem;
     line-height: 3.5rem;
     padding: 0;
@@ -221,7 +220,16 @@ p{
 
   .offer-placeholder {
     padding: 4% 0;
-    margin-bottom: 5%;
+    text-align: center;
+    margin-bottom: 4%;
+  }
+
+  .offer{
+    margin: 0 auto;
+  }
+
+  .pOffer{
+    margin: 0 auto;
   }
 
   .form-space{
