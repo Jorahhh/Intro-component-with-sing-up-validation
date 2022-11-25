@@ -6,11 +6,7 @@ const password = document.getElementById('pw');
 const submitBtn = document.getElementById('subm');
 const formSpace = document.querySelectorAll('.form-space');
 
-//Error messagges
-const errFName = document.getElementById('errFName');
-const errLName = document.getElementById('errLName');
-const errMail = document.getElementById('errMail');
-const errPass = document.getElementById('errPass');
+
 
 //It doesn't show the 'error' icons at the beginning
 formSpace.forEach( el => {
@@ -37,14 +33,10 @@ const validateForm = () => {
     
 }
 
-
 submitBtn.addEventListener('click', event => {
     event.preventDefault();
     validateForm();
 })
-
-
-
 
 
 
@@ -54,11 +46,13 @@ const invalidInput = (name, error) => {
     name.style.background = '';
 }
 
+
 const validInput = (name, error) => {
     error.style.display = '';
     name.style.border = '1px solid var(--green)';
     name.style.background = 'none';
 } 
+
 
 const validateEmail = () => {
     let expReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
@@ -69,6 +63,7 @@ const validateEmail = () => {
         validInput(email, errMail);
     }
 }
+
 
 const validatePassword = () => {
     if(password.value < 12){
